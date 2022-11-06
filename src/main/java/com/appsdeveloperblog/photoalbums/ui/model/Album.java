@@ -1,13 +1,17 @@
 package com.appsdeveloperblog.photoalbums.ui.model;
 
 public class Album {
-	private final String userId;
-	private final String albumdId;
-	private final String title;
+	private String userId;
+	private String albumId;
+	private String title;
 	
-	public Album(String userId, String albumdId, String title) {
+    public Album() {
+    	
+    }
+
+	public Album(String userId, String albumId, String title) {
 		this.userId = userId;
-		this.albumdId = albumdId;
+		this.albumId = albumId;
 		this.title = title;
 	}
 
@@ -15,8 +19,8 @@ public class Album {
 		return userId;
 	}
 
-	public String getAlbumdId() {
-		return albumdId;
+	public String getAlbumId() {
+		return albumId;
 	}
 
 	public String getTitle() {
@@ -24,5 +28,17 @@ public class Album {
 	}
 	
 	
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public void setAlbumId(String albumId) {
+		this.albumId = albumId;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	
 }
