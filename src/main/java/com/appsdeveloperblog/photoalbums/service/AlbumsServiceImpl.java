@@ -24,7 +24,7 @@ public class AlbumsServiceImpl implements AlbumsService {
 	@Override
 	public List<Album> getAlbums(String userId) {
 		
-		List<AlbumEntity> albumEntities = (List<AlbumEntity>) albumsRepository.findAll();
+		List<AlbumEntity> albumEntities = (List<AlbumEntity>) albumsRepository.findAllByUserId(userId);
 
 		if (albumEntities == null || albumEntities.isEmpty())
 			return new ArrayList<>();
